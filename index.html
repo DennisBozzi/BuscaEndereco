@@ -16,28 +16,28 @@
 
 </head>
 
-<body class="d-flex align-items-center">
+<body id="teste" class="d-flex align-items-center">
 
     <!-- Form Pesquisa -->
     <form class="container-fluid intercalated-row">
 
         <div class="row">
             <div class="offset-4 col-4">
-                <h1 class="display-4">Busca de Endereços</h1>
+                <h1 class="display-4 text-center">Busca de Endereços</h1>
             </div>
         </div>
 
         <div class="row">
             <div class="offset-4 col-4">
                 <label class="fs-1" for="pesquisa">CEP</label>
-                <input class="w-100 input-group-text" id="pesquisa" type="text" maxlength="8">
+                <input class="w-100 input-group-text" id="pesquisa" data-mask="00.000-000" type="text">
             </div>
         </div>
 
         <div class="row">
             <div class="offset-4 col-4">
-                <button type="button" class="w-100 btn btn-dark" data-toggle="modal" data-target="#modalPesquisa">🔎
-                    Buscar</button>
+                <a onclick="pesquisa()" class="w-100 btn btn-dark mt-2">🔎
+                    Buscar</a>
             </div>
         </div>
 
@@ -45,21 +45,63 @@
 
     <!-- Modal -->
     <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title">Endereço</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="limpaFormulario()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
 
                 <div class="modal-body">
-                    ...
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="logradouro" class="mt-2">Logradouro</label>
+                                <input id="logradouro" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="complemento" class="mt-2">Complemento</label>
+                                <input id="complemento" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="bairro" class="mt-2">Bairro</label>
+                                <input id="bairro" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="localidade" class="mt-2">Localidade</label>
+                                <input id="localidade" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="estado" class="mt-2">Estado</label>
+                                <input id="estado" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="ddd" class="mt-2">DDD</label>
+                                <input id="ddd" class="w-100 input-group-text" type="text" disabled>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="limpaFormulario()">Fechar</button>
                 </div>
             </div>
         </div>
@@ -68,9 +110,8 @@
     <!-- JS -->
     <script src="bootstrap-4.6.1-dist/js/bootstrap.js"></script>
 
+    <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript"
-        src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js">$("#pesquisa").cep - mask();</script>
 
 </body>
 
