@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Busca de Endereço</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.0.js"></script>
+
+</head>
+
+<body class="d-flex align-items-center">
+
+    <!-- Form Pesquisa -->
+    <form class="container-fluid intercalated-row">
+
+        <div class="row">
+            <div class="offset-4 col-4">
+                <h1 class="display-4">Busca de Endereços</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-4 col-4">
+                <label class="fs-1" for="pesquisa">CEP</label>
+                <input class="w-100 input-group-text" id="pesquisa" type="text" maxlength="8">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-4 col-4">
+                <button type="button" class="w-100 btn btn-dark" data-toggle="modal" data-target="#modalPesquisa">🔎
+                    Buscar</button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    ...
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="bootstrap-4.6.1-dist/js/bootstrap.js"></script>
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript"
+        src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js">$("#pesquisa").cep - mask();</script>
+
+</body>
+
+</html>
